@@ -1,1 +1,1 @@
-"faq-collapse" 
+# faq-collapse
