@@ -169,6 +169,14 @@ i.fas {
 }
 
 @media (max-width: 1024px) {
+  /* html {
+    width: 100vw;
+  } */
+
+  .title::after {
+    width: 200px;
+  }
+
   .title {
     font-size: 28px;
   }
@@ -180,6 +188,7 @@ i.fas {
   .wrapper {
     width: 350px;
     margin: 5px;
+    margin: 0 auto;
   }
 
   .faq {
