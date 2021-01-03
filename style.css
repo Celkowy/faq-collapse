@@ -169,10 +169,6 @@ i.fas {
 }
 
 @media (max-width: 1024px) {
-  /* html {
-    width: 100vw;
-  } */
-
   .title::after {
     width: 200px;
   }
