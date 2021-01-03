@@ -99,7 +99,7 @@ body {
   height: 2px;
   width: 0;
   opacity: 0;
-  transition: width 0.3s 0.9s;
+  transition: width 0.6s 0.3s;
 }
 
 .animate.active::after {
@@ -118,7 +118,7 @@ body {
   height: 35px;
   width: 35px;
   color: white;
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  transition: transform 0.9s ease, background-color 0.9s ease;
 }
 
 .icon:focus {
