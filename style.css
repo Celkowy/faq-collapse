@@ -39,10 +39,11 @@ body {
 }
 
 .faq {
+  position: relative;
   margin: 25px 0;
   border-radius: 10px;
   border: 2px solid black;
-  padding: 0 25px 25px 25px;
+  padding: 0 10px 25px 10px;
   height: 80px;
   width: 100%;
   overflow: hidden;
@@ -53,6 +54,26 @@ body {
   background-color: white;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
   height: auto;
+}
+
+.faq.active::after,
+.faq.active::before {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  color: #2ecc71;
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+}
+
+.faq.active::before {
+  color: #3498db;
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
 }
 
 .faq-top {
@@ -86,14 +107,6 @@ body {
   opacity: 1;
 }
 
-.faq-bottom {
-  margin-top: 25px;
-}
-
-.bold {
-  font-weight: bold;
-}
-
 .icon {
   display: flex;
   justify-content: center;
@@ -105,7 +118,7 @@ body {
   height: 35px;
   width: 35px;
   color: white;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .icon:focus {
@@ -116,6 +129,14 @@ body {
   transform: rotate(-180deg);
   background-color: black;
   color: white;
+}
+
+.faq-bottom {
+  margin-top: 25px;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 p {
@@ -131,12 +152,20 @@ p::after {
   height: 2px;
   width: 0;
   opacity: 1;
-  transition: width 0.9s linear, opacity 0.1s 0.9s linear;
+  transition: width 0.9s linear, opacity 0.9s linear;
 }
 
 p.active::after {
   width: 100%;
   opacity: 0;
+}
+
+i.fas {
+  line-height: 37px;
+  text-align: center;
+  font-size: 32px;
+  height: 35px;
+  width: 35px;
 }
 
 @media (max-width: 1024px) {
@@ -159,7 +188,6 @@ p.active::after {
 
   .faq-top h2 {
     font-size: 16px;
-    width: 225px;
   }
 
   p {
